@@ -2,7 +2,8 @@ FROM ubuntu:18.04
 
 RUN apt-get -y update && apt-get install -y \
 sudo \
-wget
+wget \
+libgl1-mesa-dev
 
 #install miniconda3
 WORKDIR /opt
@@ -16,11 +17,10 @@ ENV PATH /opt/conda/bin:$PATH
 # update pip and conda
 RUN pip install --upgrade pip && \
     conda update conda
-RUN pip install tensorflow-aarch64
+RUN pip install tensorflow-aarch64 opencv-python japanize-matplotlib
 RUN conda install jupyterlab matplotlib pandas scipy scikit-learn seaborn
 
 WORKDIR /
 RUN mkdir /work
 
-# execute jupyterlab as a default command
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]

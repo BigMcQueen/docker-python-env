@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    jupyter_lab:
+        build: .
+        ports:
+            - '8888:8888'
+        volume:
+            - '~/work:/work'
+        tty: true
+        stdin_open: true

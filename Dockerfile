@@ -18,7 +18,7 @@ ENV PATH /opt/conda/bin:$PATH
 RUN pip install --upgrade pip && \
     conda update conda
 RUN pip install tensorflow-aarch64 opencv-python japanize-matplotlib
-RUN conda install jupyterlab matplotlib pandas scipy scikit-learn seaborn
+RUN conda install jupyterlab lightgbm matplotlib pandas scipy scikit-learn seaborn xgboost
 
 WORKDIR /
 RUN mkdir /work

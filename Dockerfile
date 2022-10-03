@@ -7,10 +7,9 @@ libgl1-mesa-dev
 
 #install miniconda3
 WORKDIR /opt
-
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.9.2-Linux-aarch64.sh && \
-sh /opt/Miniconda3-py39_4.9.2-Linux-aarch64.sh -b -p /opt/conda && \
-rm -f Miniconda3-py39_4.9.2-Linux-aarch64.sh
+    sh /opt/Miniconda3-py39_4.9.2-Linux-aarch64.sh -b -p /opt/conda && \
+    rm -f Miniconda3-py39_4.9.2-Linux-aarch64.sh
 # set path
 ENV PATH /opt/conda/bin:$PATH
 

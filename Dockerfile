@@ -1,9 +1,9 @@
 FROM ubuntu:18.04
 
 RUN apt-get -y update && apt-get install -y \
-sudo \
-wget \
-libgl1-mesa-dev
+    sudo \
+    wget \
+    libgl1-mesa-dev
 
 #install miniconda3
 WORKDIR /opt

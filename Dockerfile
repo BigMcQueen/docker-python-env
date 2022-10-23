@@ -16,7 +16,7 @@ ENV PATH /opt/conda/bin:$PATH
 # update pip and conda
 RUN pip install --upgrade pip && \
     conda update conda
-RUN pip install tensorflow-aarch64 opencv-python japanize-matplotlib line-bot-sdk
+RUN pip install tensorflow-aarch64 opencv-python japanize-matplotlib line-bot-sdk openpyxl
 RUN conda install jupyterlab lightgbm matplotlib pandas scipy scikit-learn seaborn xgboost
 
 WORKDIR /
